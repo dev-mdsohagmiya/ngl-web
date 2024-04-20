@@ -73,12 +73,12 @@ function Navbar() {
         </div>
       </div>
       <div
-        className={`transition ease-in-out duration-200  grid gap-2  absolute z-50 top-24 right-[5.1%] ${
-          !isOpen ? "translate-x-[150%]" : "translate-x-[0%]"
+        className={`transition ease-in-out duration-200  grid gap-2  absolute z-50 top-24 left-[5.1%] ${
+          !isOpen ? "-translate-x-[150%]" : "-translate-x-[0%]"
         }`}
       >
         {linkData.map((item, index) => (
-          <div key={index}>
+          <div onClick={() => setIsOpen(false)} key={index}>
             <Link className="" href={item.href}>
               <ButtonC text={item.name} />
             </Link>
